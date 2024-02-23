@@ -10,11 +10,11 @@
 
 .board {
   display: grid;
-  grid-template-columns: repeat(5, 1fr); /* 5 colonnes maintenant */
-  grid-template-rows: repeat(4, 1fr); /* 4 lignes, si vous voulez le spécifier explicitement */
-  gap: 10px; /* Espace entre les cartes */
+  grid-template-columns: repeat(5, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  gap: 10px; 
   margin: 20px auto;
-  max-width: 600px; /* Assurez-vous que ceci est suffisant pour 5 cartes + espacement */
+  max-width: 600px;
 }
 
 .card {
@@ -22,16 +22,15 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  height: calc((600px - (4 * 10px)) / 5); /* hauteur ajustée pour 5 cartes par ligne */
-  width: calc((600px - (4 * 10px)) / 5); /* largeur ajustée pour 5 cartes par ligne */
-  /* ... */
+  height: calc((600px - (4 * 10px)) / 5);
+  width: calc((600px - (4 * 10px)) / 5); 
   border-radius: 8px;
   transition: transform 0.6s;
 }
 
 
 .card.is-flipped .card-inner {
-  transform: rotateY(180deg); /* Tourne la carte pour montrer le dos */
+  transform: rotateY(180deg); 
 }
 
 .card-inner {
@@ -47,23 +46,23 @@
 }
 
 .card-front, .card-back {
-  backface-visibility: hidden; /* Cache la face arrière lorsqu'elle n'est pas tournée vers l'utilisateur */
+  backface-visibility: hidden; 
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  width: 100px; /* Exemple de largeur */
+  width: 100px; 
   height: 100px;
 }
 .card-front {
-  background-color: lightblue; /* Couleur temporaire pour tester l'affichage */
+  background-color: lightblue; 
   display: flex;
   align-items: center;
   justify-content: center;
 }
 .card-back {
-  transform: rotateY(180deg); /* Fait en sorte que la face arrière soit dans le bon sens lorsqu'elle est tournée */
+  transform: rotateY(180deg); 
   content: 'Test Back';
   color: white;
 }
@@ -72,18 +71,18 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  transform: rotateY(180deg); /* Assurez-vous que cela est cohérent avec le reste de votre CSS */
+  transform: rotateY(180deg); 
 }
 
 .card-back img {
-  max-width: 90%; /* Ajustez en fonction de la taille de vos cartes */
+  max-width: 90%;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(0,0,0,0.3);
   transition: transform 0.3s ease;
 }
 
 .card-back img:hover {
-  transform: scale(1.05); /* Effet de zoom au survol */
+  transform: scale(1.05);
 }
 
 
@@ -120,11 +119,11 @@
 
 @media (max-width: 600px) {
   .board {
-    grid-template-columns: repeat(3, 1fr); /* Adaptation pour les petits écrans */
+    grid-template-columns: repeat(3, 1fr); 
   }
   
 
   .card {
-    height: 80px; /* Cartes légèrement plus petites */
+    height: 80px; 
   }
 }

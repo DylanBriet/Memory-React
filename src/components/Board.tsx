@@ -4,18 +4,18 @@ import Card from './Card';
 interface BoardProps {
     cards: Array<{
       id: number;
-      pairId: number; // Ajoutez cette ligne
+      pairId: number;
       flipped: boolean;
     }>;
     onCardClick: (id: number) => void;
   }
 
   const Board: React.FC<BoardProps> = ({ cards, onCardClick }) => {
-    console.log(cards); // Pour vérifier les données des cartes
+    console.log(cards); 
     return (
       <div className="board">
         {cards.map((card) => (
-          console.log(card), // Pour vérifier chaque carte individuellement
+          console.log(card),
           <Card
             key={card.id}
             id={card.id}
